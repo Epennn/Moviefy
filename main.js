@@ -158,7 +158,7 @@ function getStorage() {
         return;
     }
 
-    return data;
+    listArr = data;
 }
 
 function resetStorage() {
