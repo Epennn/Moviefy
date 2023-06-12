@@ -101,6 +101,7 @@ function addMovie() {
 
     listArr.push(movie);
     console.log(listArr);
+    alert('Movie Added Succesfuly!');
     setStorage();
 }
 
