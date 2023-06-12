@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moviefy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="cssManipulation.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="node_modules/fullpage.js/dist/fullpage.css" />
+    <script src="node_modules/fullpage.js/vendors/easings.min.js"></script>
+    <script type="text/javascript" src="node_modules/fullpage.js/dist/fullpage.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNav" 
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">Moviefy</a>
+
+            <div class="collapse navbar-collapse" id="toggleNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="browse.html" class="nav-link">Browse Movie</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="watchlist.html" class="nav-link">Watchlist</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="fullpage">
+        <div class="section active" id="section0">
+            <div class="container-fluid text-center">
+                <div class="row align-items-start justify-content-evenly"  id="changeDir">
+                    <div class="col justify-content-center">
+                        <img src="Images/LandingPageImage.jpg" alt="" class="image">
+                    </div>
+        
+                    <div class="col">
+                        <div class="box">
+                            <h1>Welcome to Moviefy 🎥</h1>
+                            <h3>Moviefy is a platform created for movie lovers
+                                where they can search and browse through the movies retreived from
+                                Movie API and can put them into their watchlist. 
+                            </h3>
+                            <button class="btn btn-dark" onclick="fullpage_api.moveTo('page2');">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space"></div>
+    
+        <div class="section" id="section1">
+            <div class="container text-center">
+                <div class="row align-items-start justify-content-evenly">
+                    <h2 id="heading1"><strong>Our Services</strong></h2>
+                    <div class="col justify-content-center">
+                        <div class="col">
+                            <img src="Images/movie.png" alt="" class="image2">
+                        </div>
+
+                        <div class="col">
+                            <div style="display: flex; flex-direction: column; justify-content: center; width: 300px; margin: auto;">
+                                <h3 style="margin-top: 25px"><strong>Browse</strong></h3>
+    
+                                <p style="text-align: center; font-size: 20px;">Browse and Search through our variety of movies and find movies 
+                                    that you like based on the Public API's Data  </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="col">
+                            <img src="/Images/verified.png" alt="" class="image2">
+                        </div>
+
+                        <div class="col">
+                            <div style="display: flex; flex-direction: column; justify-content: center; width: 300px; margin: auto;">
+                                <h3 style="margin-top: 25px"><strong>Watchlist</strong></h3>
+    
+                                <p style="text-align: center;font-size: 20px;">Add Movies that you liked to your watchlist  
+                                and the flexibility to update and delete movies from your watchlist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <p style="margin-top: 100px;">Copyright &copy Moviefy 2023</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            anchors: ['page1', 'page2'],
+            sectionsColor: ['#c1abd2', 'whitesmoke']
+        });
+    </script>
+
+    <script>
+        let width = window.matchMedia("(max-width: 740px)");
+        changeRowtoCol(width);
+        width.addListener(changeRowtoCol);
+    </script>
+</body>
+</html>

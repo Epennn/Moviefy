@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moviefy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNav" 
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">Moviefy</a>
+
+            <div class="collapse navbar-collapse" id="toggleNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="browse.html" class="nav-link">Browse Movie</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="watchlist.html" class="nav-link">Watchlist</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="space"></div>
+
+    <div class="container text-center">
+        <div style="margin: auto;">
+            <div class="row align-items-start justify-content-evenly" style="margin-top: 40px;" id="changeDir2">
+                <div class="col">
+                    <img src="Images/contact.png" alt="" class="image3">
+                </div>
+    
+                <div class="col" style="margin: auto;">
+                    <div style="text-align: justify;">
+                        <h1 style="color: whitesmoke;"><strong>Contact Us</strong></h1>
+                        <h4>Help us improve our website's services by contacting us through our social media links below and
+                            email inquieries is also available &#128077
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space"></div>
+            
+            <div class="contact-container">
+                <div class="contact-items">
+                    <img src="Images/instagram.png" alt="" class="contact-img">
+                    <a href="">Moviefy</a>
+                </div>
+
+                <div class="contact-items">
+                    <img src="Images/twitter.png" alt="" class="contact-img">
+                    <a href="">Moviefy</a>
+                </div>
+
+                <div class="contact-items">
+                    <img src="Images/email.png" alt="" class="contact-img">
+                    <a href="">Moviefy@cs.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy Moviefy 2023</p>
+    </div>
+
+    <script src="cssManipulation.js"></script>
+
+    <script>
+        let width = window.matchMedia("(max-width: 570px)");
+        changeRowtoCol2(width, "changeDir2");
+        width.addListener(changeRowtoCol2);
+    </script>
+</body>
+</html>
